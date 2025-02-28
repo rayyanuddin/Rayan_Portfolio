@@ -6,7 +6,15 @@ var typed = new Typed (".text", {
     loop: true,
   });
 
-  
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navbar = document.querySelector('.navbar');
+
+    menuIcon.addEventListener("click", () => {
+        navbar.classList.toggle("show");
+    });
+});
+
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxJaX_FgsdpGaOv4yAUFPFfhpv6VCUxOFalq1Zul-jEUJ4U28gDuyN2O5WQCa2_OyA/exec'
 const form = document.forms['submit-to-google-sheet']
 

@@ -1,585 +1,321 @@
-*{
-    margin: 0px;
-    padding: 0px;
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family:cursive;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
-#header{
+body {
+    background: #0a0a0a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+#header {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    width: 100%;
-    height: 10%;
-    background: transparent;
-    display: flex;
-    padding: 20px 30px ;
-    
+    padding: 15px 5%;
+    z-index: 1000;
 }
 
-.logo{
-position: relative;
-font-size: 20px;
-flex-wrap: wrap;
-text-decoration: none;
-animation: sildelogo 1s ease forwards;
-
-
-}
-
-.logo:hover{
-    transform: scale(1.5);
-}
-
-.navbar a{
-    display: inline;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: 100px;
-    border-radius: 25%;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: cyan;
     text-decoration: none;
-    color:red;
-    cursor: pointer;
-    animation: sildenav 1s ease forwards;
-    
-}
-.navbar a:hover{
-       background-color:black;
 }
 
-
-.home{
-    display: flex;
-    background-image: url(navbar.jpg);
-    background-size: 100% 100%;
-    width: 100%;
-    height: 109vh;
-    background-repeat: no-repeat;
-    padding: 220px 210px;
-}
-.home-content h1{
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    right: 170px;
-    animation: sildeshow  1s ease forwards;
-    animation-delay: 0s;
-    
-}
-.home-content p{
-    display: flex;
-    position: relative;
-    right: 670px;
-    padding: 0px 0px 0px 500px;
-    animation: slidepara 1s ease forwards;
-    
-}
-.home img{
-    width:50%;
-    height: 620px;
-    display: flex;
-    flex-wrap: wrap;
-    left: 600px;
-    bottom: 400px;
-    position: relative;
-    animation: slidelmg 1s ease forwards;
-}
-.home img:hover{
-    transform: scale(1.2);
-}
-.home .btn-box  {
-    display: inline-flex;
-    position: relative;
-    width:20%;
-    height:10%;
-    border: 2px soild aqua;
-    border-radius: 25%;
-    color: aliceblue;
+.navbar a {
+    color: white;
     text-decoration: none;
-    margin: 30px 500px 0px px ;
-    animation: slidetop 1s ease forwards;
-    
-
+    font-size: 18px;
+    margin: 0 15px;
+    transition: 0.3s ease-in-out;
 }
-.home .btn-box:hover  {
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan,0 0 50px cyan,0 0 100px cyan, 0 0 200px cyan;
-    background-color: cyan;
-    
 
+.navbar a:hover {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
 }
-.home-content a {
-    display: inline-flex;
+.aboutme {
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 5px 5px 5px;
-    width:40px;
-    height: 40px;
-    font-size: 20px;
-    border: 2px solid aqua;
+    padding: 50px 10%;
+    background: #f5f5f5;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    color:white;
-    text-decoration: none;
-    margin: 30px 10px 20px 0px;
-    animation: sildecone 1s ease backwards;
-    
-
-    
-}
-.home-content a:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan,0 0 50px cyan,0 0 100px cyan,0 0 200px cyan;
-   background-color: cyan;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes sildeshow {
-    0%{
-        transform: translate(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translate(0px);
-        opacity: 1;
-    }
+.text-about {
+    flex: 1;
 }
 
-@keyframes slidetop 
-{
-    0%{
-        transform: translatey(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translatey(0px);
-        opacity: 1;
-    }
-    
-}
-@keyframes sildecone 
-{   
-    0%{
-        transform: translatex(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translatex(0px);
-        opacity: 1;
+.text-about h2 {
+    font-size: 2rem;
+    color: #333;
 }
 
+.text-about span {
+    color: #007bff;
 }
 
-@keyframes slidepara
-{   
-    0%{
-        transform: translate(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translate(0px);
-        opacity: 1;
+.text-about p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
 }
 
-}
-
-@keyframes sildelogo
-{   
-    0%{
-        transform: translate(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translate(0px);
-        opacity: 1;
-}
-
-}
-
-@keyframes sildenav 
-{   
-    0%{
-        transform: translate(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translate(0px);
-        opacity: 1;
-}
-
-}
-
-@keyframes slidelmg
-{   
-    0%{
-        transform: translate(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translate(0px);
-        opacity: 1;
-}
-
-}
-#aboutme {
-    background-image: url(about.jpg);
-    width: 100%;
-    height: 109vh;
-    flex-wrap: wrap;
-    cursor: pointer;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.about-img img{
-    float: right;
-    position: relative;
-    display: flex;
-    flex-wrap:wrap;
-    padding: 200px 0px 0px 0px;
-    margin-right: 150px;
-    animation: slideimm 1s ease forwards;
-    
-
-}
-.text-about h2{
-    font-size: 30px;
-    padding: 220px 100px 0px 0px;
-    margin-left: 100px;
-    animation: slideright 1s ease forwards;
-}
-.text-about p{
-display: flex;
-flex-wrap: nowrap;
-position: relative;
-right: 500px;
-padding: 40px 0px 0px 300px;
-font-size: 20px;
-margin-left: 300px;
-
-}
-
-.btn-about{
-    display: inline-flex;
-    position: relative;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width:20%;
-    height:10%;
-    border: 2px soild  green;
-    border: 2px solid burlywood;
-    border-radius: 25%;
-    color:black;
-    text-decoration: none;
-    margin: 50px 200px 0px 100px ;
-    animation: slidebottom 1s ease forwards;
-    
-
-}
-.btn-about:hover{
-    background-color: burlywood;
-    box-shadow: 0 0 5px burlywood,0 0 25px burlywood,0 0 50px burlywood,0 0 100px burlywood,0 0 200px burlywood;
-}
-
-@keyframes slidebottom
-{
-    0%{
-        transform: translatey(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translatey(0px);
-        opacity: 1;
-    }
-    
-}
-@keyframes slideright
-{
-    0%{
-        transform: translatex(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translatex(0px);
-        opacity: 1;
-    }
-    
-}
-@keyframes slideimm
-{
-    0%{
-        transform: translatey(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translatey(0px);
-        opacity: 1;
-    }
-    
-}
-span{
-    color:chocolate;
-}
-
- .h3-pa{
-    position: relative;
-    font-size: 30px;
-    
-    padding: 10px 100px 0px 0px;
-    
-}
-.skills-list{
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap:40px;
-    margin-top: 50px;
-}
-.skills-list div{
-    background-color: aliceblue;
-    padding: 40px;
-    font-size: 13px;
-    flex-wrap: wrap;
-    border-right: 10px;
-    border-radius: 20px;
-    box-shadow: 1px 1px 20px cyan,1px 1px 40px cyan  ;
-    animation: slidelis 1s ease forwards;
-
-    
-}
-
-
-.skills-list img:hover{
-    transform:scale(1.5);
-}
-
-.skills-list div a{
-    display: flex;
-    position: relative;
-    font-size: 20px;
-
-}
-.read{
-
+.btn {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .navbar a {
+        margin: 5px 0;
+    }
+}
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 100vh;
+    background: url('navbar.jpg') no-repeat center center/cover;
+}
+
+.home h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.home .highlight {
+    color: cyan;
+    font-weight: bold;
+}
+
+.btn {
     background: cyan;
-    border: 2px solid blueviolet;
-    border-radius: 40px;
-    font-size: 16px;
+    color: black;
+    padding: 12px 20px;
+    margin-top: 20px;
+    display: inline-block;
     text-decoration: none;
-    margin: 30px 10px 10px 10px;
-     animation: sliderea 1s ease forwards;
-}
-.read:hover{
-   background-color:blueviolet;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
 }
 
-#contactme {
-    background-image: url(contact.png);
-    background-size: cover;
+.btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Responsive Home */
+@media (max-width: 768px) {
+    .home h1 {
+        font-size: 32px;
+    }
+}
+
+/* Skills Section */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+    text-align: center;
+}
+.section{
+ text-align: center;
+ font-size: 25px;
+}
+.skill-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px cyan;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+}
+
+.skill-box img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    color: cyan;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+/* Contact Section */
+.contactme {
+    text-align: center;
+    padding: 60px 20px;
+    background: #111;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.contactme h5 {
+    font-size: 32px;
+    font-weight: bold;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.contactme input, 
+.contactme textarea {
     width: 100%;
-    height: 120vh;
-    background-repeat: no-repeat;
-       justify-content: center;
-       align-items: center;
-        padding: 30px;
-        margin-top: 130px;
-    
-    
-}
-
-.input-list input{
-    float: right;
-    margin: 60px 100px 100px 100px;
-    justify-content: center;
-     align-items: center;
-    border: none;
+    max-width: 500px;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 2px solid cyan;
     outline: none;
-    width: 40%;
-    padding: 10px;
-    background-color: gray;
-    color: black;
-    font-size: 1rem;
-    margin-bottom:0.5rem ;
-    border-radius: 0.5rem;
-    animation: sildein 1s ease forwards;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
 }
 
-.input-list textarea{
-    float: right;
-    margin: 60px 100px 100px 100px;
-    justify-content: center;
-     align-items: center;
+/* Input Field Hover Effect */
+.contactme input:focus, 
+.contactme textarea:focus {
+    border-color: white;
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Button */
+/* Submit Button */
+.contactme button {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    background: cyan;
     border: none;
-    outline: none;
-    width: 40%;
-    padding: 5px;
-    background-color: gray;
-    color: black;
-    font-size: 1rem;
-    margin-bottom:0.5rem ;
-    border-radius: 0.5rem;
-    animation: slidetext 1s ease forwards;
-}
-.input-list .btn-box{
-    margin: 100px 0px 0px 850px;
-    border:2px solid cyan;
-    border-radius: 25%;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 4px 20px 20px 20px;
-    animation: slidebox 1s ease forwards;
-} 
- h5{
-    display: flex;
-    flex-wrap: nowrap;
-    padding:2px 650px  ;
-    font-size: 1.8rem;
-  animation: slidelef 1s ease forwards;
-    
-
-}
-.input-list .btn-box:hover{
-     background-color: blue;
-    box-shadow: 0 0 5px blue,0 0 25px blue,0 0 50px blue,0 0 100px blue;
-}
-@keyframes slidelef
-{
-    0%{
-        transform: translatey(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translatey(0px);
-        opacity: 1;
-    }
-    
-}
-
-#contactme a{
-    justify-content: space-between;
-    color: black;
-    align-items: center;
-    text-decoration: none ;
-
-}
-#contactme i{
-    font-size: 30px;   
-    color: bisque; 
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 25%;
-
-}
-#contactme i:hover
-{
-    background-color: aliceblue;
-    box-shadow: 0 0 5px aliceblue,0 0 25px aliceblue,0 0 50px aliceblue,0 0 100px aliceblue;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    color: black;
+    text-transform: uppercase;
+    margin: 20px auto 0; /* Center the button */
 }
 
-@keyframes sliderea
-{
-    0%{
-        transform: translatey(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translatey(0px);
-        opacity: 1;
-    }
-    
+/* Button Hover Effect */
+.contactme button:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 15px cyan;
 }
 
-@keyframes slidelis
-{
-    0%{
-        transform: translatex(100px);
-        opacity: 0;
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contactme button {
+        width: 90%;
+        font-size: 16px;
     }
-    100%{
-        transform: translatex(0px);
-        opacity: 1;
-    }
-    
 }
 
-@keyframes slidein
-{
-    0%{
-        transform: translatey(100px);
-        opacity: 0;
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contactme {
+        padding: 40px 10px;
     }
-    100%{
-        transform: translatey(0px);
-        opacity: 1;
+    .contactme input, 
+    .contactme textarea {
+        width: 90%;
     }
-    
-}
-@keyframes slidetext
-{
-    0%{
-        transform: translatey(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translatey(0px);
-        opacity: 1;
-    }
-    
-}
-@keyframes slidebox
-{
-    0%{
-        transform: translatey(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translatey(0px);
-        opacity: 1;
-    }
-    
 }
 
-footer{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    background-color: cornflowerblue;
-    margin-top: 70px;
- 
-}
-h6{
-    font-size: 30px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 90px;
-    animation: slideh 1s ease forwards;
-
-
-}
-footer i{
-    
-    display: flex;
-    font-size: 25px;
-    margin-top: 40px ;
-    
-    
-
-}
-@keyframes slideh
-{
-    0%{
-        transform: translatey(100px);
-        opacity: 0;
+@media (max-width: 768px) {
+    input, textarea {
+        width: 100%;
     }
-    100%{
-        transform: translatey(0px);
-        opacity: 1;
-    }
-    
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    font-size: 16px;
 }
